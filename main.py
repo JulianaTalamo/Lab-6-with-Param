@@ -10,6 +10,12 @@ def encode(password):
     encoded_password = ''.join(encoded_list)
     return encoded_password
 
+def decode(encoded_password):
+    return_str = ''
+    for digit in encoded_password:
+        digit = int(digit)
+        return_str += str((digit + 7) % 10)
+    return return_str
 
 def menu():
     password = None
